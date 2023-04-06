@@ -1,0 +1,25 @@
+.allMovies {
+    margin: 2% auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-movie {
+    height: 290px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1%;
+    margin: 1% auto;
+}
+
+.card-movie img {
+    height: 87%;
+    width: 100%;
+}
+
+.card-movie h6 {
+    color: white;
+    text-align: center;
+} 

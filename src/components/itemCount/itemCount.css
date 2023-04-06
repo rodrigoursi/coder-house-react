@@ -1,0 +1,22 @@
+.containerCount {
+    display: flex;
+    justify-content: flex-end;
+    height: 20px;
+    margin: 5% 1%;
+}
+
+.containerCount div {
+    display: flex;
+    margin: 0 2%;
+}
+
+.containerCount h6 {
+    color: white;
+    margin: 0;
+    padding: 0 1%;
+}
+
+.containerCount div button {
+    min-width: 0;
+    width: 1px;
+}

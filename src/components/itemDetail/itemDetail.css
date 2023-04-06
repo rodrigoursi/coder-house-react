@@ -1,0 +1,28 @@
+.peliDetalle .detalle {
+    border: 2px solid white;
+}
+
+.peliDetalle h1 {
+    color: white;
+    margin: 3% auto;
+    text-align: center;
+}
+
+.detalle {
+    height: 70%;
+    margin: 5% auto;
+    display: flex;
+}
+
+.detalle .poster {
+    height: 100%;
+    margin-right: 5%;
+}
+
+.detalle img{
+ height: 100%;
+}
+
+.descripcion {
+    margin: 5% 0;
+}
