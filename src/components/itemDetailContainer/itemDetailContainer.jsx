@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
     console.log(array);
     return (
         <section className="peliDetalle">
-            <Detail title={array.title} src={url + array.poster_path} tagline={array.tagline} overview={array.overview} />
+            <Detail title={array.title} src={url + array.poster_path} tagline={array.tagline} overview={array.overview} id={id} />
         </section>
     )
 }

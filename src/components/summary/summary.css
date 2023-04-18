@@ -1,0 +1,18 @@
+.container-summary {
+    background-color: darkgray;
+    color: aliceblue;
+    height: 300px;
+    width: 15%;
+    border-radius: 5%;
+}
+
+.container-summary ul {
+    font-size: 0.7em;
+}
+
+.container-summary .buton {
+    font-size: 0.7em;
+    margin: 10% 5%;
+    text-align: center;
+    width: 90%;
+}

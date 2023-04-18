@@ -1,0 +1,11 @@
+.container-cart {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0;
+}
+
+.container-cart .buttons {
+    margin: 5% 0;
+    display: flex;
+    justify-content: space-between;
+}

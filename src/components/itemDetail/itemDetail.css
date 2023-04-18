@@ -24,5 +24,8 @@
 }
 
 .descripcion {
-    margin: 5% 0;
+    /*margin: 5% 0;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
