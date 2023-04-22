@@ -1,14 +1,15 @@
 import React, { useState, useContext } from 'react';
-import { CartContext, useCart } from '../../contexts/cartContext.jsx';
+import { CartContext } from '../../contexts/cartContext.jsx';
 import "./itemDetail.css";
 import ItemCount from "../itemCount/itemCount.jsx";
 
 const Detail = (props) => {
     const { addItem } = useContext(CartContext);
-    const [compra, setCompra] = useState(false);   
+    const [compra, setCompra] = useState(false); 
+    const precio = props.precio ? props.precio : 400;  
     const onAdd = (cantidad) => {
         
-        const precio = props.precio ? props.precio : 400;
+        //const precio = props.precio ? props.precio : 400;
         const total = precio * cantidad;
         const detalle = {id:props.id, titulo:props.title, precio:precio, total:total};
         addItem(detalle, cantidad);
@@ -23,7 +24,7 @@ const Detail = (props) => {
                     <h4 className="mb-1">{props.tagline}</h4>
                     <h4 className="mb-1" style={{fontWeight:'bold'}}>Descripcion:</h4>
                     <p>{props.overview}</p>
-                    <ItemCount onAdd={onAdd} titulo={props.title} />
+                    <ItemCount onAdd={onAdd} titulo={props.title} precio={precio} />
                 </div>
             </div>
         </>

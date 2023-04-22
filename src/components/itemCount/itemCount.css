@@ -1,22 +1,30 @@
 .containerCount {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     height: 20px;
     /*margin: 15% 1%;*/
 }
 
-.containerCount div {
+.containerCount .precio {
+    /*width: 20%;*/
+}
+
+.containerCount .count div {
+    display: flex;
+}
+
+.containerCount .count {
     display: flex;
     margin: 0 2%;
 }
 
-.containerCount h6 {
+.containerCount .count h6 {
     color: white;
     margin: 0;
     padding: 0 1%;
 }
 
-.containerCount div button {
+.containerCount .count div .buttoon {
     min-width: 0;
-    width: 1px;
 }
+
