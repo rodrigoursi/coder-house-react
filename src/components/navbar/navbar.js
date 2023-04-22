@@ -34,7 +34,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to='/upcoming' className="nav-link active">
+                <Link to='./upcoming' className="nav-link active">
                   Proximamente
                 </Link>
               </li>

@@ -38,10 +38,14 @@ const Registro = () => {
         contrasenia: Yup.string().min(4).max(8).required('Campo obligatorio'),
         nombre: Yup.string().min(4).max(30).required('Campo obligatorio'),
         fecNacimiento: Yup.date().required('Campo obligatorio'),
-    })
+    });
+    const fuSubmit = (values,resetForm) => {
+      console.log(values);
+      resetForm();
+    }
   return (
     <div className="container-form">
-      <Form dataForm={objeto} campos={campos} buton="Registrarme" Schema={schema} />
+      <Form dataForm={objeto} campos={campos} buton="Registrarme" Schema={schema} fuSubmit={fuSubmit} />
     </div>
   );
 };

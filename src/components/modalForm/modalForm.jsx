@@ -22,6 +22,11 @@ const ModalForm = () => {
     navigate("./registro");
   };
 
+  const fuSubmit = (values,resetForm) => {
+    console.log(values);
+    resetForm();
+  }
+
   return (
     <>
       <Link className="nav-link active" data-bs-toggle="modal" to="#modalForm">
@@ -50,7 +55,7 @@ const ModalForm = () => {
             </div>
             <div className="modal-body">
               {" "}
-              <IniciarSesion dataForm={objeto} buton={"Iniciar sesion"} />{" "}
+              <IniciarSesion dataForm={objeto} buton={"Iniciar sesion"} fuSubmit={fuSubmit} />{" "}
             </div>
             <div className="modal-footer">
               <button

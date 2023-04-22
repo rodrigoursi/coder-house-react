@@ -2,13 +2,9 @@ import "./formSesion.css";
 import { Formik } from "formik";
 import { useState, useEffect, useRef } from "react";
 
-const fuSubmit = (values,resetForm) => {
-  console.log(values);
-  resetForm();
-}
-
-const Formulario = (props) => {console.log('PRIMER',props.campos)
-const formikRef = useRef();
+const Formulario = (props) => {
+  
+  const formikRef = useRef();
   //const campos = { mail: "", contrasenia: "", nombre: "", fecNacimiento: "", };
   //const campos = props.initialValues;
   const [campos,setCampos] = useState({});
@@ -20,7 +16,7 @@ const formikRef = useRef();
   return (
     <>
       <Formik initialValues={campos}
-        onSubmit={(values, {resetForm})=> fuSubmit(values, resetForm)}
+        onSubmit={(values, {resetForm})=> props.fuSubmit(values, resetForm)}
         innerRef={formikRef}
         validationSchema={props.Schema}
       >
@@ -37,7 +33,7 @@ const formikRef = useRef();
                     type={data.type}
                     className="form-control"
                     id={data.id}
-                    value={values[data.name]}
+                    value={values[data.name] || ""}
                     onChange={handleChange}
                   />
                   {errors[data.name] && <small style={{color:'red', fontSize:'0.5em'}}>{errors[data.name]}</small> }

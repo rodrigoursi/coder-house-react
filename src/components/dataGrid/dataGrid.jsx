@@ -4,19 +4,19 @@ import "./dataGrid.css";
 
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'titulo', headerName: 'Producto', width: 250 },
+  { field: 'id', headerName: 'ID', width: 200 },
+  { field: 'titulo', headerName: 'Producto', width: 225 },
   {
     field: 'precio',
     headerName: 'Precio unit',
     type: 'number',
-    width: 90,
+    width: 80,
   },
   {
     field: 'cantidad',
     headerName: 'Cantidad',
     type: 'number',
-    width: 90,
+    width: 70,
   },
   {
     field: 'total',

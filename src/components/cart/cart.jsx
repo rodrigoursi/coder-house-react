@@ -8,12 +8,13 @@ import Summary from "../summary/summary.jsx";
 const Cart = () => {
     const [id,setId] = useState(0);
     const {cart} = useContext(CartContext);
-    const {cargoServicio} = useContext(CartContext);
+    const {cargoServicio, calcSubTotal} = useContext(CartContext);
     const {clearCart} = useContext(CartContext);
     const {removeItem} = useContext(CartContext);
     const enviarId = (id) => {setId(id);}
     console.log(cart);
-    console.log(id);
+    console.log(calcSubTotal());
+
     return (
         <>
         <h1 style={{color:'white', textAlign:'center'}}>MI CARRITO</h1>
@@ -27,7 +28,7 @@ const Cart = () => {
                         <button type="button" className="btn btn-danger" onClick={clearCart} >Vaciar carrito</button>
                         </div>
                     </div>
-                    < Summary array={cart} cargo={cargoServicio} />
+                    < Summary array={cart} cargo={cargoServicio} subtotal={calcSubTotal()} />
                 </div>
             ) : (<h2 style={{color:'white', textAlign:'center'}}>Vacio</h2>)
         }
