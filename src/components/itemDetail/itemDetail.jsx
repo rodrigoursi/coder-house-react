@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../../contexts/cartContext.jsx';
+import swal from 'sweetalert';
 import "./itemDetail.css";
 import ItemCount from "../itemCount/itemCount.jsx";
 
@@ -8,13 +9,12 @@ const Detail = (props) => {
     const [compra, setCompra] = useState(false); 
     const precio = props.precio ? props.precio : 400;  
     const onAdd = (cantidad) => {
-        
-        //const precio = props.precio ? props.precio : 400;
         const total = precio * cantidad;
         const detalle = {id:props.id, titulo:props.title, precio:precio, total:total};
         addItem(detalle, cantidad);
         setCompra(true);
     }
+    compra && swal('EXITO..!', 'El producto se agrego al carrito', 'success');
     return (
         <>
             <h1>{props.title}</h1>
