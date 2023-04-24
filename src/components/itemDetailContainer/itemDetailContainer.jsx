@@ -23,7 +23,6 @@ const ItemDetailContainer = () => {
             const getArticulo = async () => {
                 let objConId = {};
                 const querySnapshot = await getDocs(q);
-                console.log(querySnapshot)
                 querySnapshot.forEach((doc) => {
                     // doc.data() is never undefined for query doc snapshots
                     //console.log(doc.id, " => ", doc.data());
@@ -48,7 +47,6 @@ const ItemDetailContainer = () => {
 
     const url = categoria === 'upcoming' ? 'https://www.themoviedb.org/t/p/w220_and_h330_face' : '';
     
-    console.log(array);
     return (
         <section className="peliDetalle">
             <Detail title={array.title} precio={array.precio} src={url + array.poster_path} tagline={array.tagline} overview={array.overview} id={id} />

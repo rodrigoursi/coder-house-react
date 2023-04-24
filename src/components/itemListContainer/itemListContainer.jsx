@@ -9,7 +9,6 @@ import { collection, query, getDocs, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
     let {categoria} = useParams(); 
-    console.log(categoria)
     let proximamente = categoria === 'upcoming' ? true : false;
     categoria = categoria ? categoria : 'peliculas';
     const [array, setArray] = useState([]);
@@ -64,8 +63,7 @@ const ItemListContainer = () => {
 
             }
             getCatArticulos();
-        }    
-        console.log(categoria)     
+        }         
     },[categoria, proximamente]);
     return (
         <article className="allMovies">

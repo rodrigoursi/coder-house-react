@@ -12,8 +12,6 @@ const Cart = () => {
     const {clearCart} = useContext(CartContext);
     const {removeItem} = useContext(CartContext);
     const enviarId = (id) => {setId(id);}
-    console.log(cart);
-    console.log(calcSubTotal());
 
     return (
         <>

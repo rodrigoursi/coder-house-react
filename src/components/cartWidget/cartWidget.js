@@ -4,7 +4,6 @@ import {CartContext} from '../../contexts/cartContext.jsx'
 
 const Cart = () => {
     const {cartQuantity} = useContext(CartContext);
-    console.log(cartQuantity())
     return (
         <div><ShoppingCartIcon sx={{color: "white"}} /> <span style={{color:"white"}} >{cartQuantity()}</span> </div>
     );

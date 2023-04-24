@@ -25,7 +25,6 @@ export const CartProvider = (props) => {
   const addItem = (detalle, cantidad) => {
     let indice = cart.findIndex(producto => producto.id === detalle.id);
     if(indice !== -1) {
-      console.log(cart[indice])
       cart[indice].cantidad += cantidad;
       cart[indice].total = (cart[indice].cantidad) * (cart[indice].precio);
       setCart([...cart]);
@@ -55,7 +54,6 @@ export const CartProvider = (props) => {
     newCart.splice(index, 1);
     setCart([...newCart]);
   }
-  console.log(calcSubTotal())
   return (
       <CartContext.Provider
         value={{
